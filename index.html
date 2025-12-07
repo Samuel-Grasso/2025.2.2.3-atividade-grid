@@ -87,33 +87,107 @@
     <div class="projects-grid">
 
 
-        <div class="project-card">
-            <img src="IMG/SAMPLE1.png" alt="Projeto 1">
-            <h3>Projeto One</h3>
+        <div class="project-card" onclick="openProject(this)">
+            <img src="primeiroprojeto.png" alt="Projeto 1">
+            <h3>Primeiro Projeto</h3>
         </div>
 
-        <!-- PROJETO 2 -->
-        <div class="project-card">
-            <img src="IMG/SAMPLE2.png" alt="Projeto 2">
-            <h3>Projeto Two</h3>
+        <div class="project-card" onclick="openProject(this)">
+            <img src="segundoprojeto.png" alt="Projeto 2">
+            <h3>Segundo Projeto Pt.1</h3>
         </div>
 
         <!-- PROJETO 3 -->
-        <div class="project-card">
-            <img src="IMG/SAMPLE3.png" alt="Projeto 3">
-            <h3>Projeto Three</h3>
+        <div class="project-card" onclick="openProject(this)">
+            <img src="segundoprojeto2.png" alt="Projeto 3">
+            <h3>Segundo Projeto Pt.2</h3>
         </div>
 
         <!-- PROJETO 4 -->
-        <div class="project-card">
-            <img src="IMG/SAMPLE4.png" alt="Projeto 4">
-            <h3>Projeto Four</h3>
+        <div class="project-card" onclick="openProject(this)">
+            <img src="segundoprojeto3.png" alt="Projeto 4">
+            <h3>Segundo Projeto Pt.3</h3>
+        </div>
+
+        <div class="project-card" onclick="openProject(this)">
+            <img src="projeto1img1.png" alt="Projeto 4">
+            <h3>Projeto de cores Pt.1</h3>
+        </div>
+        
+        <div class="project-card" onclick="openProject(this)">
+            <img src="projeto1img2.png" alt="Projeto 4">
+            <h3>Projeto de cores Pt.2</h3>
+        </div>
+
+        <div class="project-card" onclick="openProject(this)">
+            <img src="projeto1img3.png" alt="Projeto 4">
+            <h3>Projeto de cores Pt.3</h3>
+        </div>
+        
+        <div class="project-card" onclick="openProject(this)">
+            <img src="projeto1img4.png" alt="Projeto 4">
+            <h3>Projeto de cores Pt.4</h3>
+        </div>
+
+        <div class="project-card" onclick="openProject(this)">
+            <img src="projeto3img1.png" alt="Projeto 4">
+            <h3>Projeto Mobile-first Pt.1</h3>
+        </div>
+
+        <div class="project-card" onclick="openProject(this)">
+            <img src="projeto3img2.png" alt="Projeto 4">
+            <h3>Projeto Mobile-first Pt.2</h3>
+        </div>
+
+        <div class="project-card" onclick="openProject(this)">
+            <img src="projeto3img3.png" alt="Projeto 4">
+            <h3>Projeto Mobile-first Pt.3</h3>
         </div>
 
         <!-- add more using same card format -->
-        
+    <div id="project-view" class="project-view" onclick="closeProject()">
+        <img id="view-img">
+        <h2 id="view-title"></h2>
+    </div>   
     </div>
-</section>
+    </section>
+
+    <footer id="Contatos" class="footer">
+    <div class="footer-content">
+
+        <a href="https://www.linkedin.com/in/samuel-grasso-42334b324/" target="_blank" class="footer-icon">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+        </a>
+
+        <a href="https://github.com/Samuel-Grasso" target="_blank" class="footer-icon">
+            <img class="github-white" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+        </a>
+
+        <a href="mailto:samuel.f.grasso@gmail.com" class="footer-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+        </a>
+
+    </div>
+
+    <p class="footer-text">© 2025 | Desenvolvido por Samuel Grasso</p>
+    </footer>
+<script>
+function openProject(card) {
+    const view = document.getElementById("project-view");
+    document.getElementById("view-img").src = card.querySelector("img").src;
+    document.getElementById("view-title").textContent = card.querySelector("h3").textContent;
+    view.classList.add("active");
+}
+
+function closeProject() {
+    document.getElementById("project-view").classList.remove("active");
+}
+
+// Close with ESC
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeProject();
+});
+</script>
 
     <script>
 document.getElementById("menuToggle").addEventListener("click", () => {

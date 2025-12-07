@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 html {
     scroll-behavior: smooth;
@@ -245,7 +245,6 @@ header {
     display: grid;
     gap: 25px;
     grid-template-columns: 130px 130px;
-    direction: 2; /* fully swaps columns */
 }
 .skill-card { direction: ltr; }
 
@@ -307,6 +306,44 @@ header {
 }
 
 /* IMAGE STYLE */
+.project-view {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.92);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.35s ease;
+    z-index: 9999;
+}
+
+/* When active */
+.project-view.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Image inside fullscreen */
+.project-view img {
+    width: 90vw;
+    max-width: 1200px;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #3556ff;
+}
+
+/* Title below */
+.project-view h2 {
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: 0 0 15px #3556ff;
+}
+
 .project-card img {
     width: 100%;
     height: 180px;
@@ -326,6 +363,47 @@ header {
     box-shadow: 0 0 15px #3556ff, 0 0 25px #3556ff77;
     border-color: #4b6fff;
 }
+
+/* ========== FOOTER ========== */
+.footer {
+    background: #0c0c0c;
+    padding: 40px 20px 30px;
+    text-align: center;
+    color: #fff;
+}
+
+/* icon container */
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 18px;
+}
+
+/* icon style */
+.footer-icon img {
+    width: 40px;
+    height: 40px;
+    transition: 0.3s ease;
+}
+
+/* hover effects */
+.footer-icon:hover img {
+    transform: scale(1.15);
+}
+
+/* small text below */
+.footer-text {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+/* desktop enhancements */
+@media (min-width: 768px) {
+    .footer-icon img { width: 48px; height: 48px; }
+    .footer-text { font-size: 1rem; }
+}
+
 
 /* Desktop layout */
 @media (min-width: 900px) {
@@ -352,4 +430,7 @@ header {
 }
 .github-white {
     filter: invert(1);
+}
+.footer-icon img.github-white {
+    filter: invert(1) brightness(200%) !important;
 }
