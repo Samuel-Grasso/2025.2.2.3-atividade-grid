@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel Grasso - Portfolio</title>
+    <link rel="stylesheet" href="portifolio.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=keyboard_double_arrow_down" />
+</head>
+<body>
+    <header>
+    <nav class="desktop-menu">
+            <div class="menu-wrapper">
+                <span class="material-icons menu-icon" id="menuToggle">menu</span>
+
+                <ul class="menu-dropdown" id="menuDropdown">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contatos">Contatos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Olá, Eu sou <span>Samuel Grasso.</span></h1>
+            <p>Aluno de Análise e Desenvolvimento de Sistemas</p>
+            <a href="#about" class="glow-btn">Conheça meu progresso <span class="material-symbols-outlined">
+    keyboard_double_arrow_down
+    </span></a>
+        </div>
+    </section>
+    <section id="about" class="about-section">
+
+    <h2 class="section-title">Sobre</h2>
+
+    <div class="about-container">
+
+        <!-- LEFT SIDE -->
+        <div class="about-left">
+            <div class="profile-outline">
+
+            </div>
+
+            <p>
+                Aluno do Curso de TADS - IFRN, com forte interesse nas areas de Webdesign, Segurança de dados e Desenvolvimento de Jogos. Ja tenho experiencia extensa em trabalhar em empresas de alto ritmo e em outros Idiomas. Fora do profissional sou um namorado, pai de pet, leitor, nadador e pintor.
+            </p>
+        </div>
+
+        <!-- RIGHT SIDE – SKILLS -->
+        <div class="skills-grid">
+            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"><span>HTML</span></div>
+            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"><span>CSS</span></div>
+            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"><span>JAVASCRIPT</span></div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
+                <span>VS CODE</span>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+                <span>C++</span>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg">
+                <span>BLENDER</span>
+            </div>
+            <div class="skill-card">
+                <img class="github-white" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                <span>GITHUB</span>
+            </div>
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+                <span>PYTHON</span>
+            </div>
+            <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"><span>GIT</span></div>
+        </div>
+
+        </div>
+    </section>
+
+    <section id="projetos" class="projects-section">
+    <h2 class="section-title">Projetos</h2>
+
+    <div class="projects-grid">
+
+
+        <div class="project-card">
+            <img src="IMG/SAMPLE1.png" alt="Projeto 1">
+            <h3>Projeto One</h3>
+        </div>
+
+        <!-- PROJETO 2 -->
+        <div class="project-card">
+            <img src="IMG/SAMPLE2.png" alt="Projeto 2">
+            <h3>Projeto Two</h3>
+        </div>
+
+        <!-- PROJETO 3 -->
+        <div class="project-card">
+            <img src="IMG/SAMPLE3.png" alt="Projeto 3">
+            <h3>Projeto Three</h3>
+        </div>
+
+        <!-- PROJETO 4 -->
+        <div class="project-card">
+            <img src="IMG/SAMPLE4.png" alt="Projeto 4">
+            <h3>Projeto Four</h3>
+        </div>
+
+        <!-- add more using same card format -->
+        
+    </div>
+</section>
+
+    <script>
+document.getElementById("menuToggle").addEventListener("click", () => {
+    document.getElementById("menuDropdown").classList.toggle("show");
+});
+</script>
+</body>
+</html>
